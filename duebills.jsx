@@ -1,5 +1,9 @@
-// const _ = require('lodash');
-// const uniqueInvoices = _.uniqBy([...dailyInvoices, ...clearedCredits], '_id');
+// Using a Map for better performance
+const invoiceMap = new Map();
+[...dailyInvoices, ...clearedCredits].forEach(invoice => {
+  invoiceMap.set(invoice._id.toString(), invoice);
+});
+const uniqueInvoices = Array.from(invoiceMap.values());
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import VendorNavbar from './VendorNavbar';
