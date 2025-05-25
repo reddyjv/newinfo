@@ -1,3 +1,7 @@
+ dueStatus:Number,
+    duepaymentMode:String,
+    paidreferenceNumber:String,
+    clearedDate:String
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import VendorNavbar from './VendorNavbar';
