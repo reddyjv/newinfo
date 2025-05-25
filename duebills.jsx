@@ -1,7 +1,5 @@
- dueStatus:Number,
-    duepaymentMode:String,
-    paidreferenceNumber:String,
-    clearedDate:String
+// const _ = require('lodash');
+// const uniqueInvoices = _.uniqBy([...dailyInvoices, ...clearedCredits], '_id');
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import VendorNavbar from './VendorNavbar';
